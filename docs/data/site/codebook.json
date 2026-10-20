@@ -1,0 +1,278 @@
+[
+ {
+  "column": "election_id",
+  "description": "Stable identifier: the list year and the row number within that year (for example 1944-0001). IDs never change once published.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "year",
+  "description": "Year of the election list the record comes from.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "row_type",
+  "description": "\"listing\" for an ordinary row; \"ditto\" for a row marked \"Do.\" in the source list (same employer as the row above); \"further_hearing\" for a further hearing of the case above.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "refers_to",
+  "description": "For ditto and further-hearing rows, the election_id of the row they refer to.",
+  "filled": 379,
+  "filled_pct": 2.8
+ },
+ {
+  "column": "case_name",
+  "description": "Case name exactly as written in the source list, or in the NLRB decisions index for 1944 to 1946, 1950, 1955, and 1960.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "employer",
+  "description": "Employer name as written in the source, with spacing tidied. Ditto and further-hearing rows take the employer of the row they refer to.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "source_hearing_date",
+  "description": "Hearing date as written in the source list (1936 to 1940 only). Kept verbatim, including footnote markers.",
+  "filled": 2418,
+  "filled_pct": 17.7
+ },
+ {
+  "column": "source_decision_date",
+  "description": "Decision date as written in the source list. Kept verbatim, including footnote markers such as \"(b)\".",
+  "filled": 7308,
+  "filled_pct": 53.4
+ },
+ {
+  "column": "nlrb_case_number",
+  "description": "Case number of the matched NLRB decision. Early numbers without a regional prefix are written with \"00\".",
+  "filled": 12050,
+  "filled_pct": 88.1
+ },
+ {
+  "column": "nlrb_citation",
+  "description": "Citation of the matched decision in the bound volumes, Decisions and Orders of the NLRB (volume NLRB page).",
+  "filled": 12050,
+  "filled_pct": 88.1
+ },
+ {
+  "column": "nlrb_decision_date",
+  "description": "Date of the matched NLRB decision (MM/DD/YYYY).",
+  "filled": 12050,
+  "filled_pct": 88.1
+ },
+ {
+  "column": "nlrb_region",
+  "description": "NLRB regional office, from the case number prefix. Blank for case numbers without a regional prefix (most cases before about 1943).",
+  "filled": 8118,
+  "filled_pct": 59.4
+ },
+ {
+  "column": "match_category",
+  "description": "How the election was matched to a decision: 1 = a representation case in the election year; 2 = any case within one year; 3 = any case in any year. Blank = no decision matched, or the match was rejected on review (see notes).",
+  "filled": 12050,
+  "filled_pct": 88.1
+ },
+ {
+  "column": "location_status",
+  "description": "Located; Decision found, location not yet extracted; Decision match rejected; or No decision found.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "county",
+  "description": "County (or parish, borough, or independent city) of the establishment where the election took place, under the standard name for its FIPS code. Connecticut uses its eight historical counties.",
+  "filled": 12281,
+  "filled_pct": 89.8
+ },
+ {
+  "column": "state",
+  "description": "State of the establishment (full name).",
+  "filled": 12281,
+  "filled_pct": 89.8
+ },
+ {
+  "column": "county_fips",
+  "description": "Five-digit county FIPS code (state code + county code). Connecticut uses its historical county codes (09001 to 09015), not the planning regions adopted in 2022.",
+  "filled": 12281,
+  "filled_pct": 89.8
+ },
+ {
+  "column": "location_source",
+  "description": "Where the location comes from: NLRB decision; Web research; Web research, verified; Web research, corrected; NLRB decision, unverified match; or Inferred from employer name.",
+  "filled": 12281,
+  "filled_pct": 89.8
+ },
+ {
+  "column": "location_tier",
+  "description": "Evidence tier for the location. 1 = stated in the matched NLRB decision; 2 = documented by an independent source; 3 = inferred or uncertain.",
+  "filled": 12281,
+  "filled_pct": 89.8
+ },
+ {
+  "column": "location_evidence",
+  "description": "Quoted passage that supports the location.",
+  "filled": 12246,
+  "filled_pct": 89.6
+ },
+ {
+  "column": "source_url",
+  "description": "Link to the matched NLRB decision or to the source used for the location.",
+  "filled": 12867,
+  "filled_pct": 94.1
+ },
+ {
+  "column": "plant_or_hq",
+  "description": "What the county refers to: Plant (the establishment where the election was held), Headquarters (the company headquarters), Plant and headquarters (both in the same place), or Office (another company office).",
+  "filled": 12091,
+  "filled_pct": 88.4
+ },
+ {
+  "column": "multiple_units",
+  "description": "Yes when the decision covers more than one plant or unit.",
+  "filled": 6796,
+  "filled_pct": 49.7
+ },
+ {
+  "column": "additional_counties",
+  "description": "Other counties named for multi-plant cases.",
+  "filled": 771,
+  "filled_pct": 5.6
+ },
+ {
+  "column": "industry_description",
+  "description": "Short description of the employer's business, in the style of the NLRB's industry headers.",
+  "filled": 9947,
+  "filled_pct": 72.7
+ },
+ {
+  "column": "sic_code",
+  "description": "Four-digit 1987 Standard Industrial Classification (SIC) code, assigned from the decision's own description of the business.",
+  "filled": 9947,
+  "filled_pct": 72.7
+ },
+ {
+  "column": "sic_title",
+  "description": "Title of the SIC code.",
+  "filled": 9947,
+  "filled_pct": 72.7
+ },
+ {
+  "column": "sic_major_group",
+  "description": "Two-digit SIC major group.",
+  "filled": 9947,
+  "filled_pct": 72.7
+ },
+ {
+  "column": "sic_division",
+  "description": "SIC division letter and name (for example \"D Manufacturing\").",
+  "filled": 9947,
+  "filled_pct": 72.7
+ },
+ {
+  "column": "industry_basis",
+  "description": "Where the industry came from: Industry header (the heading printed above the decision in the bound volume), Decision text (the decision's description of the business), Not enough information, or Header rejected (the heading belonged to another case, so no code was kept).",
+  "filled": 10331,
+  "filled_pct": 75.6
+ },
+ {
+  "column": "industry_evidence",
+  "description": "The text the industry was read from (OCR text; may contain scanning errors).",
+  "filled": 8608,
+  "filled_pct": 63.0
+ },
+ {
+  "column": "union_name",
+  "description": "Name of the petitioning union, as written in the decision caption.",
+  "filled": 8882,
+  "filled_pct": 65.0
+ },
+ {
+  "column": "union_affiliation",
+  "description": "AFL, CIO, AFL-CIO (after the December 1955 merger), or Independent.",
+  "filled": 10037,
+  "filled_pct": 73.4
+ },
+ {
+  "column": "election_type",
+  "description": "Consent (agreed by the parties) or Board-directed (ordered by the Board after a hearing).",
+  "filled": 9954,
+  "filled_pct": 72.8
+ },
+ {
+  "column": "bargaining_unit_size",
+  "description": "Approximate number of employees in the bargaining unit, when the decision states it.",
+  "filled": 3066,
+  "filled_pct": 22.4
+ },
+ {
+  "column": "outcome",
+  "description": "Union certified; No union; Petition dismissed; Election directed, result not yet found (the result is in a separate certification document we have not located); or Not found in decision.",
+  "filled": 9865,
+  "filled_pct": 72.1
+ },
+ {
+  "column": "outcome_evidence",
+  "description": "Quoted passage that supports the outcome.",
+  "filled": 8118,
+  "filled_pct": 59.4
+ },
+ {
+  "column": "outcome_source",
+  "description": "Citation of the document the outcome comes from.",
+  "filled": 7888,
+  "filled_pct": 57.7
+ },
+ {
+  "column": "eligible_voters",
+  "description": "Eligible voters, from the tally of ballots.",
+  "filled": 498,
+  "filled_pct": 3.6
+ },
+ {
+  "column": "votes_for",
+  "description": "Votes for the union (or for the leading union).",
+  "filled": 916,
+  "filled_pct": 6.7
+ },
+ {
+  "column": "votes_against",
+  "description": "Votes against union representation.",
+  "filled": 877,
+  "filled_pct": 6.4
+ },
+ {
+  "column": "challenged_ballots",
+  "description": "Challenged ballots.",
+  "filled": 322,
+  "filled_pct": 2.4
+ },
+ {
+  "column": "void_ballots",
+  "description": "Void or blank ballots.",
+  "filled": 436,
+  "filled_pct": 3.2
+ },
+ {
+  "column": "vote_tally_source",
+  "description": "Citation of the document the tally comes from.",
+  "filled": 925,
+  "filled_pct": 6.8
+ },
+ {
+  "column": "needs_review",
+  "description": "Yes when the record is flagged for manual research or verification.",
+  "filled": 13673,
+  "filled_pct": 100.0
+ },
+ {
+  "column": "notes",
+  "description": "Notes from the research process.",
+  "filled": 2200,
+  "filled_pct": 16.1
+ }
+]

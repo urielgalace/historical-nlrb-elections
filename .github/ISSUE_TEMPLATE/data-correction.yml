@@ -1,0 +1,53 @@
+name: Data correction
+description: Suggest a change to one value in the dataset, with a source.
+title: "Correction: "
+labels: ["data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping. Please send one correction per issue. Election IDs (like 1944-0123) are shown on the Data page of the website, and column names are listed in the codebook.
+  - type: input
+    id: election_id
+    attributes:
+      label: Election ID
+      placeholder: 1944-0123
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Field to change
+      description: The column name from the codebook, for example county, outcome, or votes_for.
+    validations:
+      required: true
+  - type: input
+    id: current_value
+    attributes:
+      label: Current value
+  - type: input
+    id: proposed_value
+    attributes:
+      label: Proposed value
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: A source someone else can check, such as an NLRB citation (45 NLRB 123), an archive reference, or a newspaper and date.
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Link to the source
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+  - type: input
+    id: credit
+    attributes:
+      label: Name for credit
+      description: Leave blank to stay anonymous.

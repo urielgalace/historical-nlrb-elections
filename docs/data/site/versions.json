@@ -1,0 +1,133 @@
+{
+ "releases": [
+  {
+   "version": "1.0",
+   "date": "2026-10-19",
+   "status": "Release candidate",
+   "title": "First public release",
+   "summary": "13,673 election records from 17 years (1936 to 1960), 89.8% with a county.",
+   "files": [
+    {
+     "label": "Dataset (CSV)",
+     "path": "data/releases/v1.0/nlrb_elections_v1.0.csv",
+     "kind": "data",
+     "bytes": 10461622
+    },
+    {
+     "label": "Codebook (CSV)",
+     "path": "data/releases/v1.0/codebook_v1.0.csv",
+     "kind": "codebook",
+     "bytes": 5584
+    },
+    {
+     "label": "Research workbooks, one per year (Excel, zipped)",
+     "path": "data/releases/v1.0/nlrb_research_files_v1.0.zip",
+     "kind": "research",
+     "bytes": 5980354
+    },
+    {
+     "label": "Elections missing a result (CSV)",
+     "path": "data/releases/v1.0/gaps/missing_result.csv",
+     "kind": "gap",
+     "bytes": 1232828
+    },
+    {
+     "label": "Elections missing a county (CSV)",
+     "path": "data/releases/v1.0/gaps/missing_county.csv",
+     "kind": "gap",
+     "bytes": 170755
+    },
+    {
+     "label": "Elections missing an industry (CSV)",
+     "path": "data/releases/v1.0/gaps/missing_industry.csv",
+     "kind": "gap",
+     "bytes": 617678
+    },
+    {
+     "label": "Vote tallies held back for review (CSV)",
+     "path": "data/releases/v1.0/review_held_back_tallies.csv",
+     "kind": "review",
+     "bytes": 15127
+    },
+    {
+     "label": "County codes corrected from the research workbooks (CSV)",
+     "path": "data/releases/v1.0/county_code_fixes.csv",
+     "kind": "fixes",
+     "bytes": 33290
+    }
+   ],
+   "coverage": {
+    "Elections": 13673,
+    "With a county": 12281,
+    "With an industry code": 9947,
+    "With a definite result": 2681,
+    "With a union name": 8882,
+    "With a vote tally": 925
+   },
+   "changes": null,
+   "notes": [
+    "County codes for 255 records differ from the research workbooks: 182 Connecticut records moved from the 2022 planning regions back to the historical counties, 68 records in independent cities that had been coded as the county of the same name, and 5 records whose county had no code (fixed where the name identified one county, otherwise cleared for research). Each change is listed in county_code_fixes.csv.",
+    "40 vote tallies failed a consistency check and are held back until checked by hand.",
+    "County names follow the standard name for each FIPS code, so each county is spelled one way.",
+    "SIC titles follow one spelling per code (1057 records changed, for example \"&\" written as \"and\")."
+   ]
+  }
+ ],
+ "history": [
+  {
+   "date": "2026-07-11",
+   "title": "Accuracy pass and integrity checks",
+   "summary": "Union names re-extracted with case-number checks; a blind audit of 71 records found 87% correct. 23 automated integrity checks pass on all 17 yearly files."
+  },
+  {
+   "date": "2026-07-07",
+   "title": "Eight new variables",
+   "summary": "Added county FIPS codes, NLRB region, SIC major group and division, union name and affiliation, election type, and bargaining unit size."
+  },
+  {
+   "date": "2026-07",
+   "title": "Elections only, with match categories",
+   "summary": "Unfair labor practice cases removed, leaving 13,673 election records. Each election re-matched in three tiers, recorded in a new match category column."
+  },
+  {
+   "date": "2026-06-26",
+   "title": "Industry codes and vote tallies",
+   "summary": "Industry read from each decision and coded to the 1987 SIC; vote counts read from published tallies of ballots."
+  },
+  {
+   "date": "2026-06-22",
+   "title": "Pilot years 1950, 1955, and 1960",
+   "summary": "Three later years added from the NLRB decisions index, bringing the total to 15,032 records, 90% with a county."
+  },
+  {
+   "date": "2026-06-18",
+   "title": "1944 to 1946 added",
+   "summary": "Three years without source lists built directly from the NLRB decisions index: 4,008 cases, 91% to 96% located per year."
+  },
+  {
+   "date": "2026-06-11",
+   "title": "Location claims verified",
+   "summary": "1,522 uncertain locations checked against independent sources: 505 confirmed and 299 corrected."
+  },
+  {
+   "date": "2026-05-29",
+   "title": "First pass: county identification",
+   "summary": "Elections in the 1936 to 1943 and 1947 to 1949 source lists matched to NLRB decisions, with web research for the rest: 8,757 records, 94% with a county."
+  }
+ ],
+ "planned": [
+  {
+   "version": "1.1",
+   "title": "RA research on missing locations and industries",
+   "summary": "County, city, and industry for elections the automated pipeline could not place, researched by the project RAs with a source for each.",
+   "status": "In progress"
+  },
+  {
+   "version": "2.0",
+   "title": "NLRB records from FOIA request 2026-NLFO-01920",
+   "summary": "Election outcomes and vote tallies from the NLRB's already-scanned records of certified elections before 1961. Request received July 31, 2026; the NLRB extended processing on September 15, 2026.",
+   "status": "Waiting on the NLRB"
+  }
+ ],
+ "current": "1.0"
+}
