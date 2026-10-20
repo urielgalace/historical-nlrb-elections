@@ -2,78 +2,84 @@
  "releases": [
   {
    "version": "1.0",
-   "date": "2026-10-19",
+   "date": "2026-10-20",
    "status": "Release candidate",
    "title": "First public release",
-   "summary": "13,673 election records from 17 years (1936 to 1960), 89.8% with a county.",
+   "summary": "13,673 election records from 17 years (1936 to 1960), 86.1% with a county.",
    "files": [
     {
      "label": "Dataset (CSV)",
      "path": "data/releases/v1.0/nlrb_elections_v1.0.csv",
      "kind": "data",
-     "bytes": 10461622
+     "bytes": 10388601
     },
     {
      "label": "Codebook (CSV)",
      "path": "data/releases/v1.0/codebook_v1.0.csv",
      "kind": "codebook",
-     "bytes": 5584
+     "bytes": 5731
     },
     {
      "label": "Research workbooks, one per year (Excel, zipped)",
      "path": "data/releases/v1.0/nlrb_research_files_v1.0.zip",
      "kind": "research",
-     "bytes": 5980354
+     "bytes": 5926099
     },
     {
      "label": "Elections missing a result (CSV)",
      "path": "data/releases/v1.0/gaps/missing_result.csv",
      "kind": "gap",
-     "bytes": 1232828
+     "bytes": 1270122
     },
     {
      "label": "Elections missing a county (CSV)",
      "path": "data/releases/v1.0/gaps/missing_county.csv",
      "kind": "gap",
-     "bytes": 170755
+     "bytes": 216748
     },
     {
      "label": "Elections missing an industry (CSV)",
      "path": "data/releases/v1.0/gaps/missing_industry.csv",
      "kind": "gap",
-     "bytes": 617678
+     "bytes": 631049
     },
     {
      "label": "Vote tallies held back for review (CSV)",
      "path": "data/releases/v1.0/review_held_back_tallies.csv",
      "kind": "review",
-     "bytes": 15127
+     "bytes": 15129
     },
     {
      "label": "County codes corrected from the research workbooks (CSV)",
      "path": "data/releases/v1.0/county_code_fixes.csv",
      "kind": "fixes",
-     "bytes": 33290
+     "bytes": 32634
     }
    ],
    "coverage": {
     "Elections": 13673,
-    "With a county": 12281,
-    "With an industry code": 9947,
-    "With a definite result": 2681,
-    "With a union name": 8882,
-    "With a vote tally": 925
+    "With a county": 11772,
+    "With an industry code": 9584,
+    "With a definite result": 2523,
+    "With a union name": 8750,
+    "With a vote tally": 905
    },
    "changes": null,
    "notes": [
-    "County codes for 255 records differ from the research workbooks: 182 Connecticut records moved from the 2022 planning regions back to the historical counties, 68 records in independent cities that had been coded as the county of the same name, and 5 records whose county had no code (fixed where the name identified one county, otherwise cleared for research). Each change is listed in county_code_fixes.csv.",
+    "An October 2026 review checked every matched election in the 1936 to 1943 and 1947 to 1949 lists against the text of its decision. 1,405 records had been matched to a decision about a different company: 755 now point to the right decision, and 650 have no decision until they are researched. The notes column of each record says what changed.",
+    "County codes for 250 records differ from the research workbooks: 178 Connecticut records moved from the 2022 planning regions back to the historical counties, 67 records in independent cities that had been coded as the county of the same name, and 5 records whose county had no code (fixed where the name identified one county, otherwise cleared for research). Each change is listed in county_code_fixes.csv.",
     "40 vote tallies failed a consistency check and are held back until checked by hand.",
     "County names follow the standard name for each FIPS code, so each county is spelled one way.",
-    "SIC titles follow one spelling per code (1057 records changed, for example \"&\" written as \"and\")."
+    "SIC titles follow one spelling per code (1003 records changed, for example \"&\" written as \"and\")."
    ]
   }
  ],
  "history": [
+  {
+   "date": "2026-10-20",
+   "title": "Wrong matches corrected",
+   "summary": "All 7,224 matched elections in the 1936 to 1943 and 1947 to 1949 lists checked against the text of their decisions. 1,405 had been matched to a different company: 755 moved to the right decision and 650 left for research."
+  },
   {
    "date": "2026-07-11",
    "title": "Accuracy pass and integrity checks",

@@ -7,41 +7,41 @@ case_name,"Case name exactly as written in the source list, or in the NLRB decis
 employer,"Employer name as written in the source, with spacing tidied. Ditto and further-hearing rows take the employer of the row they refer to.",13673,100.0
 source_hearing_date,"Hearing date as written in the source list (1936 to 1940 only). Kept verbatim, including footnote markers.",2418,17.7
 source_decision_date,"Decision date as written in the source list. Kept verbatim, including footnote markers such as ""(b)"".",7308,53.4
-nlrb_case_number,"Case number of the matched NLRB decision. Early numbers without a regional prefix are written with ""00"".",12050,88.1
-nlrb_citation,"Citation of the matched decision in the bound volumes, Decisions and Orders of the NLRB (volume NLRB page).",12050,88.1
-nlrb_decision_date,Date of the matched NLRB decision (MM/DD/YYYY).,12050,88.1
-nlrb_region,"NLRB regional office, from the case number prefix. Blank for case numbers without a regional prefix (most cases before about 1943).",8118,59.4
-match_category,"How the election was matched to a decision: 1 = a representation case in the election year; 2 = any case within one year; 3 = any case in any year. Blank = no decision matched, or the match was rejected on review (see notes).",12050,88.1
+nlrb_case_number,"Case number of the matched NLRB decision. Early numbers without a regional prefix are written with ""00"".",11400,83.4
+nlrb_citation,"Citation of the matched decision in the bound volumes, Decisions and Orders of the NLRB (volume NLRB page).",11400,83.4
+nlrb_decision_date,Date of the matched NLRB decision (MM/DD/YYYY).,11400,83.4
+nlrb_region,"NLRB regional office, from the case number prefix. Blank for case numbers without a regional prefix (most cases before about 1943).",7709,56.4
+match_category,"How the election was matched to a decision: 1 = a representation case in the election year; 2 = any case within one year; 3 = any case in any year. Blank = no decision matched, or the match was rejected on review (see notes).",11400,83.4
 location_status,"Located; Decision found, location not yet extracted; Decision match rejected; or No decision found.",13673,100.0
-county,"County (or parish, borough, or independent city) of the establishment where the election took place, under the standard name for its FIPS code. Connecticut uses its eight historical counties.",12281,89.8
-state,State of the establishment (full name).,12281,89.8
-county_fips,"Five-digit county FIPS code (state code + county code). Connecticut uses its historical county codes (09001 to 09015), not the planning regions adopted in 2022.",12281,89.8
-location_source,"Where the location comes from: NLRB decision; Web research; Web research, verified; Web research, corrected; NLRB decision, unverified match; or Inferred from employer name.",12281,89.8
-location_tier,Evidence tier for the location. 1 = stated in the matched NLRB decision; 2 = documented by an independent source; 3 = inferred or uncertain.,12281,89.8
-location_evidence,Quoted passage that supports the location.,12246,89.6
-source_url,Link to the matched NLRB decision or to the source used for the location.,12867,94.1
-plant_or_hq,"What the county refers to: Plant (the establishment where the election was held), Headquarters (the company headquarters), Plant and headquarters (both in the same place), or Office (another company office).",12091,88.4
-multiple_units,Yes when the decision covers more than one plant or unit.,6796,49.7
-additional_counties,Other counties named for multi-plant cases.,771,5.6
-industry_description,"Short description of the employer's business, in the style of the NLRB's industry headers.",9947,72.7
-sic_code,"Four-digit 1987 Standard Industrial Classification (SIC) code, assigned from the decision's own description of the business.",9947,72.7
-sic_title,Title of the SIC code.,9947,72.7
-sic_major_group,Two-digit SIC major group.,9947,72.7
-sic_division,"SIC division letter and name (for example ""D Manufacturing"").",9947,72.7
-industry_basis,"Where the industry came from: Industry header (the heading printed above the decision in the bound volume), Decision text (the decision's description of the business), Not enough information, or Header rejected (the heading belonged to another case, so no code was kept).",10331,75.6
-industry_evidence,The text the industry was read from (OCR text; may contain scanning errors).,8608,63.0
-union_name,"Name of the petitioning union, as written in the decision caption.",8882,65.0
-union_affiliation,"AFL, CIO, AFL-CIO (after the December 1955 merger), or Independent.",10037,73.4
-election_type,Consent (agreed by the parties) or Board-directed (ordered by the Board after a hearing).,9954,72.8
-bargaining_unit_size,"Approximate number of employees in the bargaining unit, when the decision states it.",3066,22.4
-outcome,"Union certified; No union; Petition dismissed; Election directed, result not yet found (the result is in a separate certification document we have not located); or Not found in decision.",9865,72.1
-outcome_evidence,Quoted passage that supports the outcome.,8118,59.4
-outcome_source,Citation of the document the outcome comes from.,7888,57.7
-eligible_voters,"Eligible voters, from the tally of ballots.",498,3.6
-votes_for,Votes for the union (or for the leading union).,916,6.7
-votes_against,Votes against union representation.,877,6.4
+county,"County (or parish, borough, or independent city) of the establishment where the election took place, under the standard name for its FIPS code. Connecticut uses its eight historical counties.",11772,86.1
+state,State of the establishment (full name).,11772,86.1
+county_fips,"Five-digit county FIPS code (state code + county code). Connecticut uses its historical county codes (09001 to 09015), not the planning regions adopted in 2022.",11772,86.1
+location_source,"Where the location comes from: NLRB decision; Web research; Web research, verified; Web research, corrected; NLRB decision, unverified match; or Inferred from employer name.",11772,86.1
+location_tier,Evidence tier for the location. 1 = stated in the matched NLRB decision; 2 = documented by an independent source; 3 = inferred or uncertain.,11772,86.1
+location_evidence,Quoted passage that supports the location.,11733,85.8
+source_url,Link to the matched NLRB decision or to the source used for the location.,12318,90.1
+plant_or_hq,"What the county refers to: Plant (the establishment where the election was held), Headquarters (the company headquarters), Plant and headquarters (both in the same place), or Office (another company office).",11516,84.2
+multiple_units,Yes when the decision covers more than one plant or unit.,6202,45.4
+additional_counties,Other counties named for multi-plant cases.,694,5.1
+industry_description,"Short description of the employer's business, in the style of the NLRB's industry headers.",9584,70.1
+sic_code,"Four-digit 1987 Standard Industrial Classification (SIC) code, assigned from the decision's own description of the business.",9584,70.1
+sic_title,Title of the SIC code.,9584,70.1
+sic_major_group,Two-digit SIC major group.,9584,70.1
+sic_division,"SIC division letter and name (for example ""D Manufacturing"").",9584,70.1
+industry_basis,"Where the industry came from: Industry header (the heading printed above the decision in the bound volume), Decision text (the decision's description of the business), Same employer, other decision (the matched decision does not describe the business, so the code used for the same employer in its other decisions), Not enough information, or Header rejected (the heading belonged to another case, so no code was kept).",10028,73.3
+industry_evidence,The text the industry was read from (OCR text; may contain scanning errors).,7988,58.4
+union_name,"Name of the petitioning union, as written in the decision caption.",8750,64.0
+union_affiliation,"AFL, CIO, AFL-CIO (after the December 1955 merger), or Independent.",9436,69.0
+election_type,Consent (agreed by the parties) or Board-directed (ordered by the Board after a hearing).,9299,68.0
+bargaining_unit_size,"Approximate number of employees in the bargaining unit, when the decision states it.",2912,21.3
+outcome,"Union certified; No union; Petition dismissed; Election directed, result not yet found (the result is in a separate certification document we have not located); or Not found in decision.",9937,72.7
+outcome_evidence,Quoted passage that supports the outcome.,8417,61.6
+outcome_source,Citation of the document the outcome comes from.,8223,60.1
+eligible_voters,"Eligible voters, from the tally of ballots.",505,3.7
+votes_for,Votes for the union (or for the leading union).,896,6.6
+votes_against,Votes against union representation.,857,6.3
 challenged_ballots,Challenged ballots.,322,2.4
-void_ballots,Void or blank ballots.,436,3.2
-vote_tally_source,Citation of the document the tally comes from.,925,6.8
+void_ballots,Void or blank ballots.,412,3.0
+vote_tally_source,Citation of the document the tally comes from.,905,6.6
 needs_review,Yes when the record is flagged for manual research or verification.,13673,100.0
-notes,Notes from the research process.,2200,16.1
+notes,Notes from the research process.,3457,25.3

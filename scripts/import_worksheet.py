@@ -10,8 +10,9 @@ works without it). Rows whose Status is "Resolved" become corrections:
     the location evidence, when County (found) and State (found) are filled in;
   - industry_description, with industry_basis "Contributed research", when Industry (found) is
     filled in. A project member then assigns the SIC code.
-The worksheet has no election IDs, so rows are matched to the current release by year and case
-name, in order, among records that have no county. Unmatched rows are listed, not guessed.
+Rows with an Election ID (the October 2026 supplement has the column) are matched by it. The
+original worksheet has no election IDs, so its rows are matched to the current release by year and
+case name, in order, among records that have no county. Unmatched rows are listed, not guessed.
 Review the output before running make_release.py.
 """
 import argparse
@@ -65,9 +66,11 @@ def main():
     v = json.load(open(os.path.join(SITE, 'versions.json')))['current']
     records = read_csv(os.path.join(ROOT, 'docs', 'data', 'releases', f'v{v}', f'nlrb_elections_v{v}.csv'))
     open_rows = defaultdict(list)                  # year -> records without a county, in ID order
+    open_by_id = {}
     for r in records:
         if not r['county']:
             open_rows[r['year']].append(r)
+            open_by_id[r['election_id']] = r
 
     sheet = read_sheet(args.worksheet)
     out, unmatched, skipped = [], [], []
@@ -76,10 +79,13 @@ def main():
         year, name = str(row.get('Year', '')).split('.')[0], squash(row.get('Name of Case'))
         candidates = open_rows.get(year, [])
         rec = None
-        for j in range(cursor[year], len(candidates)):   # the sheet keeps the dataset's order
-            if squash(candidates[j]['case_name']) == name:
-                rec, cursor[year] = candidates[j], j + 1
-                break
+        if row.get('Election ID'):
+            rec = open_by_id.get(row['Election ID'])
+        else:
+            for j in range(cursor[year], len(candidates)):   # the sheet keeps the dataset's order
+                if squash(candidates[j]['case_name']) == name:
+                    rec, cursor[year] = candidates[j], j + 1
+                    break
         if row.get('Status') != 'Resolved':
             continue
         if not rec:

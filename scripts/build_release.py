@@ -51,7 +51,7 @@ def plant_or_hq(value):
 
 
 INDUSTRY_BASIS = {'header': 'Industry header', 'text': 'Decision text', 'text (careful read)': 'Decision text',
-                  'insufficient': 'Not enough information'}
+                  'same employer': 'Same employer, other decision', 'insufficient': 'Not enough information'}
 
 
 def industry_basis(value):
@@ -219,6 +219,10 @@ def main():
     n_city = sum(1 for f in county_fixes if ' was coded ' in f['reason'])
     n_other = len(county_fixes) - n_ct - n_city
     notes = [
+        'An October 2026 review checked every matched election in the 1936 to 1943 and 1947 to 1949 lists '
+        'against the text of its decision. 1,405 records had been matched to a decision about a different '
+        'company: 755 now point to the right decision, and 650 have no decision until they are researched. '
+        'The notes column of each record says what changed.',
         f'County codes for {len(county_fixes)} records differ from the research workbooks: {n_ct} Connecticut '
         f'records moved from the 2022 planning regions back to the historical counties, {n_city} records in '
         f'independent cities that had been coded as the county of the same name, and {n_other} records whose '

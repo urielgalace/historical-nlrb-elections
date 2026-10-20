@@ -24,6 +24,8 @@ UNIT_BINS = [(1, 10, '1–9'), (10, 25, '10–24'), (25, 50, '25–49'), (50, 10
 
 # Development milestones before the first public release (from the project's working notes).
 HISTORY = [
+    {'date': '2026-10-20', 'title': 'Wrong matches corrected',
+     'summary': 'All 7,224 matched elections in the 1936 to 1943 and 1947 to 1949 lists checked against the text of their decisions. 1,405 had been matched to a different company: 755 moved to the right decision and 650 left for research.'},
     {'date': '2026-07-11', 'title': 'Accuracy pass and integrity checks',
      'summary': 'Union names re-extracted with case-number checks; a blind audit of 71 records found 87% correct. 23 automated integrity checks pass on all 17 yearly files.'},
     {'date': '2026-07-07', 'title': 'Eight new variables',

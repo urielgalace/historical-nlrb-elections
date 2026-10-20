@@ -26,7 +26,7 @@ The current dataset is `docs/data/releases/v1.0/nlrb_elections_v1.0.csv`, one ro
 record (13,673 rows, 46 columns). `codebook_v1.0.csv` describes each column. Please read the
 Methods page first. In short:
 
-- Only 19.6% of records have a definite result. Do not compute win rates from this release.
+- Only 18.5% of records have a definite result. Do not compute win rates from this release.
 - The dataset covers the elections in the source lists and in published Board decisions, not
   every election the NLRB held.
 - Rows marked "Do." in the source lists are separate entries and are kept.

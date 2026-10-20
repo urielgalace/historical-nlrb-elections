@@ -6,6 +6,7 @@ sic_code,sic_title
 0182,Food Crops Grown Under Cover
 0254,Poultry Hatcheries
 0273,Animal Aquaculture
+0711,Soil Preparation Services
 0723,"Crop Preparation Services for Market, Except Cotton Ginning"
 0724,Cotton Ginning
 0751,"Livestock Services, Except Veterinary"
@@ -218,7 +219,6 @@ sic_code,sic_title
 2789,Bookbinding and Related Work
 2796,Platemaking and Related Services
 2800,Chemicals and Allied Products
-2810,Industrial Inorganic Chemicals
 2812,Alkalies and Chlorine
 2813,Industrial Gases
 2816,Inorganic Pigments
@@ -321,7 +321,6 @@ sic_code,sic_title
 3357,Nonferrous Wiredrawing and Insulating
 3360,Nonferrous Foundries (Castings)
 3363,Aluminum Die-Castings
-3364,"Nonferrous Die-Castings, Except Aluminum"
 3365,Aluminum Foundries
 3366,Copper Foundries
 3369,"Nonferrous Foundries, Except Aluminum and Copper"
@@ -439,7 +438,7 @@ sic_code,sic_title
 3652,Prerecorded Records and Tapes
 3661,Telephone and Telegraph Apparatus
 3663,Radio and Television Broadcasting and Communications Equipment
-3669,"Communications Equipment, NEC"
+3669,"Communications Equipment, Not Elsewhere Classified"
 3671,Electron Tubes
 3675,Electronic Capacitors
 3677,"Electronic Coils, Transformers, and Other Inductors"
@@ -514,12 +513,12 @@ sic_code,sic_title
 4400,Water Transportation
 4412,Deep Sea Foreign Transportation of Freight
 4424,Deep Sea Domestic Transportation of Freight
-4432,Freight Transportation on the Great Lakes
 4449,"Water Transportation of Freight, Not Elsewhere Classified"
 4482,Ferries
 4489,"Water Transportation of Passengers, NEC"
 4491,Marine Cargo Handling
 4492,Towing and Tugboat Services
+4499,"Water Transportation Services, Not Elsewhere Classified"
 4512,"Air Transportation, Scheduled"
 4581,"Airports, Flying Fields, and Airport Terminal Services"
 4612,Crude Petroleum Pipelines
@@ -568,7 +567,6 @@ sic_code,sic_title
 5112,Stationery and Office Supplies
 5122,"Drugs, Drug Proprietaries, and Druggists' Sundries"
 5131,"Piece Goods, Notions, and Other Dry Goods"
-5136,Men's and Boys' Clothing and Furnishings
 5137,"Women's, Children's, and Infants' Clothing and Accessories"
 5141,"Groceries, General Line"
 5142,Packaged Frozen Foods

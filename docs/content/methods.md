@@ -8,7 +8,7 @@ Where each value comes from, and how far to trust it. Every record in release {{
 
 **Years without a list.** For 1944 to 1946, and for the pilot years 1950, 1955, and 1960, records come straight from the NLRB's index of Board decisions: one record for each representation case in the index for that year.
 
-**NLRB decisions.** The Board's decisions are printed in the bound volumes Decisions and Orders of the National Labor Relations Board, and the NLRB website indexes them with a scanned copy of each. The project downloaded and read 11,106 decisions and 2,603 certification documents. Their text comes from the text layer of the scans, so it contains scanning errors.
+**NLRB decisions.** The Board's decisions are printed in the bound volumes Decisions and Orders of the National Labor Relations Board, and the NLRB website indexes them with a scanned copy of each. The project downloaded and read 12,399 decisions and 2,603 certification documents. Their text comes from the text layer of the scans, so it contains scanning errors.
 
 ## Matching elections to decisions
 
@@ -21,7 +21,9 @@ Each election is matched to the Board decision about it by employer name and dat
 | 3 | Any case in any year | {{n_match_cat3}} |
 | Blank | No decision matched, or the match was rejected | {{n_unmatched}} |
 
-An earlier check removed matches where the employer's name does not appear in the decision. A stricter check in October 2026 flagged 657 more, mostly in categories 1 and 2, where the decision appears to be about a different company with a similar name. <span class="todo">Before launch: review the 657 flagged matches</span> Category 2 and 3 matches are weaker in general and deserve more care.
+An earlier check removed matches where the employer's name does not appear in the decision. In October 2026, all 7,224 matched records in the source lists were checked again, because some had been matched to a different company with a similar name: for example, American Granite Company to a decision about The American Furniture Co. Each employer's name was compared with the caption and text of its decision, and 353 unclear cases were read by hand. 1,405 matches were wrong. 755 were moved to the decision about the right company, and 650 were removed, leaving those records for research. The `notes` column of each record says what changed. When the right decision is from a different year, the record takes only its location and industry, since its union and result may belong to another election. The years built from the index were not affected, because each of their records comes from its own decision.
+
+Category 2 and 3 matches are weaker in general and deserve more care.
 
 ## Location
 
@@ -43,7 +45,7 @@ In June 2026, 1,522 uncertain locations were checked against independent sources
 
 Industry comes from the matched decision: either the heading printed above the decision in the bound volume, or the decision's own description of the business, such as "engaged in the manufacture of steel castings." Each description is coded to a four-digit code in the 1987 Standard Industrial Classification (SIC), the last edition before NAICS replaced it in 1997. The division and two-digit major group follow from the code.
 
-{{n_sic}} records ({{pct_sic}}) have a code. A blind check of 65 records found the right industry in 91% and the exact four-digit code in 85%. About 5% were wrong, usually because text from a neighboring case on the same page had been read. Headings that turned out to belong to another case were removed (`industry_basis` reads "Header rejected").
+{{n_sic}} records ({{pct_sic}}) have a code. A blind check of 65 records found the right industry in 91% and the exact four-digit code in 85%. About 5% were wrong, usually because text from a neighboring case on the same page had been read. Headings that turned out to belong to another case were removed (`industry_basis` reads "Header rejected"). When a decision does not describe the business, the code can come from the same employer's other decisions, if most of them agree ("Same employer, other decision").
 
 ## Union, election type, and unit size
 
@@ -81,7 +83,7 @@ The research workbooks pass 23 automated checks. Among them: every FIPS code has
 ## Known limits
 
 - Coverage differs by year and by source. Counts are not totals of NLRB elections.
-- Some elections are matched to the decision of a different company with a similar name. The location, industry, and union for those records come from the wrong decision until they are reviewed.
+- Matches rest on names. An election at a company with several plants may be matched to the decision about another of its plants, and a few matches to a company with nearly the same name may remain.
 - Results are incomplete and lean toward union wins, as explained above.
 - Text comes from scans, so quoted passages contain scanning errors.
 - The 1987 SIC was written decades after these elections, so some industries of the period fit its categories loosely.

@@ -11,6 +11,7 @@ election_id,state,old_county,old_fips,county,county_fips,reason
 1938-0287,Connecticut,Capitol Planning Region,09110,Hartford County,09003,Connecticut planning region 09110 -> 09003
 1938-0291,Connecticut,Western Connecticut Planning Region,09190,Fairfield County,09001,Connecticut planning region 09190 -> 09001
 1938-0405,Connecticut,Greater Bridgeport Planning Region,09120,Fairfield County,09001,Connecticut planning region 09120 -> 09001
+1938-0545,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1938-0555,Connecticut,Southeastern Connecticut Planning Region,09180,New London County,09011,Connecticut planning region 09180 -> 09011
 1938-0570,Connecticut,Western Connecticut Planning Region,09190,Fairfield County,09001,Connecticut planning region 09190 -> 09001
 1938-0571,Connecticut,Western Connecticut Planning Region,09190,Fairfield County,09001,Connecticut planning region 09190 -> 09001
@@ -87,7 +88,6 @@ election_id,state,old_county,old_fips,county,county_fips,reason
 1943-0925,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
 1943-0934,Connecticut,Capitol Planning Region,09110,Hartford County,09003,Connecticut planning region 09110 -> 09003
 1943-0942,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
-1943-1045,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1943-1111,Connecticut,Capitol Planning Region,09110,Hartford County,09003,Connecticut planning region 09110 -> 09003
 1943-1117,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1943-1189,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
@@ -204,29 +204,24 @@ election_id,state,old_county,old_fips,county,county_fips,reason
 1948-0404,Connecticut,Greater Bridgeport Planning Region,09120,Fairfield County,09001,Connecticut planning region 09120 -> 09001
 1948-0488,Puerto Rico,"Caguas (municipio), Puerto Rico",,Caguas Municipio,72035,"""Caguas (municipio), Puerto Rico"" had no code -> 72035"
 1948-0532,Connecticut,Greater Bridgeport Planning Region,09120,Fairfield County,09001,Connecticut planning region 09120 -> 09001
-1948-0702,Virginia,City of Roanoke,51161,City of Roanoke,51770,"""City of Roanoke"" was coded 51161 (Roanoke County) -> 51770"
 1948-0730,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1948-0766,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1948-0776,Connecticut,Capitol Planning Region,09110,Hartford County,09003,Connecticut planning region 09110 -> 09003
 1948-0780,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
 1948-0789,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
-1948-0835,Connecticut,Northeastern Connecticut Planning Region,09150,Windham County,09015,Connecticut planning region 09150 -> 09015
 1948-0843,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1948-0849,Connecticut,Northwest Hills Planning Region,09160,Litchfield County,09005,Connecticut planning region 09160 -> 09005
 1948-0854,Connecticut,Northeastern Connecticut Planning Region,09150,Windham County,09015,Connecticut planning region 09150 -> 09015
 1948-0938,Virginia,City of Roanoke,51161,City of Roanoke,51770,"""City of Roanoke"" was coded 51161 (Roanoke County) -> 51770"
-1949-0052,Connecticut,Naugatuck Valley Planning Region,09140,New Haven County,09009,Connecticut planning region 09140 -> 09009
 1949-0167,Connecticut,Naugatuck Valley Planning Region,09140,New Haven County,09009,Connecticut planning region 09140 -> 09009
 1949-0171,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
+1949-0354,Connecticut,Western Connecticut Planning Region,09190,Fairfield County,09001,Connecticut planning region 09190 -> 09001
 1949-0358,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
 1949-0502,Connecticut,Greater Bridgeport Planning Region,09120,Fairfield County,09001,Connecticut planning region 09120 -> 09001
 1949-0544,Connecticut,South Central Connecticut Planning Region,09170,New Haven County,09009,Connecticut planning region 09170 -> 09009
 1949-0593,Connecticut,Capitol Planning Region,09110,Hartford County,09003,Connecticut planning region 09110 -> 09003
 1949-0606,Connecticut,Capitol Planning Region,09110,Litchfield County,09005,Connecticut planning region 09110 -> 09005
-1949-0707,Connecticut,Southeastern Connecticut Planning Region,09180,New London County,09011,Connecticut planning region 09180 -> 09011
-1949-0815,Connecticut,Greater Bridgeport Planning Region,09120,Fairfield County,09001,Connecticut planning region 09120 -> 09001
 1949-0817,Connecticut,Capitol Planning Region,09110,Hartford County,09003,Connecticut planning region 09110 -> 09003
-1949-0958,Connecticut,Greater Bridgeport Planning Region,09120,Fairfield County,09001,Connecticut planning region 09120 -> 09001
 1949-1026,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1949-1194,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
 1949-1195,Virginia,City of Richmond,51159,City of Richmond,51760,"""City of Richmond"" was coded 51159 (Richmond County) -> 51760"
