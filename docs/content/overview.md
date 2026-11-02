@@ -32,4 +32,4 @@ A research dataset of {{n_elections}} union representation elections held under 
 
 ## Who made this
 
-Matthew S. Johnson and Uriel Galace, with research assistants Adam De Leeuw, Anvita, Jeslyn Cai, and Ryan Zaaiett. Questions and corrections are welcome on the [Contribute](#contribute) page.
+Matthew S. Johnson and Uriel Galace, with research assistants Adam De Leeuw, Anvita Anaja, Jeslyn Cai, and Ryan Zaaiett. Questions and corrections are welcome on the [Contribute](#contribute) page.
