@@ -64,7 +64,7 @@ button), `contacts` (the names and addresses in the page footer), and `preview` 
 
 Data: Creative Commons Attribution 4.0 (`LICENSE-DATA.md`). Code: MIT (`LICENSE`).
 
-## Citation (proposed)
+## Citation
 
 See `CITATION.cff`.
 

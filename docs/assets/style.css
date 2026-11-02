@@ -137,6 +137,7 @@ code, .mono { font-family: var(--mono); font-size: 0.9em; }
   text-transform: uppercase;
 }
 .dek { max-width: 64ch; color: var(--ink-2); font-size: 1.0625rem; }
+.masthead .callout { justify-self: start; }
 .tabs {
   display: flex; gap: 2px; margin-top: 10px;
   overflow-x: auto; scrollbar-width: none; margin-bottom: -1px;

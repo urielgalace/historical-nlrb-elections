@@ -1,5 +1,3 @@
-<div data-component="work-in-progress"></div>
-
 # Union elections before the NLRB, 1936 to 1960
 
 A research dataset of {{n_elections}} union representation elections held under the National Labor Relations Act, rebuilt from the Board's published decisions. For each election it records where it took place, the employer's industry, the union, and what is known of the result, with a source for each value.
@@ -26,7 +24,7 @@ A research dataset of {{n_elections}} union representation elections held under 
 
 <div data-component="start"></div>
 
-## How to cite (proposed)
+## How to cite
 
 <div data-component="cite"></div>
 

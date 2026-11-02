@@ -226,11 +226,8 @@
   // ---------- Overview ----------
   async function pageOverview() {
     const md = await getText('content/overview.md');
-    return renderMarkdown(md, { 'work-in-progress': workInProgress, kpis: kpiTiles, 'year-chart': yearFigure, start: startLinks, cite: citeBlock });
+    return renderMarkdown(md, { kpis: kpiTiles, 'year-chart': yearFigure, start: startLinks, cite: citeBlock });
   }
-
-  const workInProgress = () => h('p', { class: 'callout', role: 'note' }, h('strong', null, 'This is a work in progress. '),
-    'We are still checking and adding to the data, so records and counts may change.');
 
   function kpiTiles() {
     const s = S.agg.stats;
