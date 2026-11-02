@@ -55,6 +55,10 @@ cd docs && python3 -m http.server 8000
 Then open http://localhost:8000. Opening `index.html` directly from disk does not work, because
 the page loads its data with `fetch`.
 
+GitHub Pages lets browsers reuse files for 10 minutes. The page asks the server before reusing its
+text and data, but when you change a file in `docs/assets`, raise the `?v=` number for it in
+`docs/index.html` so that a reload picks it up.
+
 `docs/data/site/config.json` holds the settings: `repo_url` (turns on the "Open as a GitHub
 issue" button), `form_url_template` (a prefilled Google Form link, with `{election_id}`, `{field}`,
 `{proposed_value}`, `{source}`, and similar placeholders), `contact_email` (turns on the "Email it"

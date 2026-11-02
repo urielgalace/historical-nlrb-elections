@@ -63,13 +63,14 @@
     return 0;
   };
 
+  // no-cache: GitHub Pages lets browsers reuse files for 10 minutes; this asks the server first, so a reload shows the latest.
   async function getJSON(path) {
-    const r = await fetch(path);
+    const r = await fetch(path, { cache: 'no-cache' });
     if (!r.ok) throw new Error(`${path} returned ${r.status}`);
     return r.json();
   }
   async function getText(path) {
-    const r = await fetch(path);
+    const r = await fetch(path, { cache: 'no-cache' });
     if (!r.ok) throw new Error(`${path} returned ${r.status}`);
     return r.text();
   }
