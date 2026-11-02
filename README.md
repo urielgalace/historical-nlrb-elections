@@ -4,15 +4,15 @@ Union representation elections held under the National Labor Relations Act, rebu
 National Labor Relations Board's published decisions: where each election took place, the
 employer's industry, the union, and what is known of the result, with a source for each value.
 
-> **Status: draft for review.** This repository is private and the website is not public yet.
-> Text marked "To confirm" or "To decide" on the site needs a decision from the project leads
-> before launch.
+> **Status: work in progress.** The website is live at
+> https://urielgalace.github.io/historical-nlrb-elections/. Records and counts may change as the
+> data is checked and extended.
 
 ## What is here
 
 | Path | What it holds |
 |---|---|
-| `docs/` | The website. GitHub Pages will serve this folder. |
+| `docs/` | The website. GitHub Pages serves this folder. |
 | `docs/data/releases/v1.0/` | Release 1.0: the dataset, codebook, gap lists, held-back tallies, county code fixes, and the research workbooks. A release never changes after it is published. |
 | `docs/data/site/` | JSON files the website reads. The scripts generate them; do not edit by hand. |
 | `docs/content/` | Text of the Overview, Methods, and Contribute pages, in Markdown. `{{tokens}}` are filled from the release statistics. |
@@ -27,8 +27,9 @@ record (13,673 rows, 46 columns). `codebook_v1.0.csv` describes each column. Ple
 Methods page first. In short:
 
 - Only 18.5% of records have a definite result. Do not compute win rates from this release.
-- The dataset covers the elections in the source lists and in published Board decisions, not
-  every election the NLRB held.
+- The dataset covers the cases listed in the NLRB's annual reports and in published Board
+  decisions, not every election the NLRB held. The 1936 and 1937 lists also include unfair labor
+  practice cases.
 - Rows marked "Do." in the source lists are separate entries and are kept.
 
 ## Making a new release
@@ -56,10 +57,10 @@ the page loads its data with `fetch`.
 
 `docs/data/site/config.json` holds the settings: `repo_url` (turns on the "Open as a GitHub
 issue" button), `form_url_template` (a prefilled Google Form link, with `{election_id}`, `{field}`,
-`{proposed_value}`, `{source}`, and similar placeholders), `contact_email`, and `preview` (turns
-off downloads).
+`{proposed_value}`, `{source}`, and similar placeholders), `contact_email` (turns on the "Email it"
+button), `contacts` (the names and addresses in the page footer), and `preview` (turns off downloads).
 
-## License (proposed, to confirm before launch)
+## License (proposed)
 
 Data: Creative Commons Attribution 4.0 (`LICENSE-DATA.md`). Code: MIT (`LICENSE`).
 

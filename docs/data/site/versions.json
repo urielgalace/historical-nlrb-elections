@@ -2,8 +2,8 @@
  "releases": [
   {
    "version": "1.0",
-   "date": "2026-10-20",
-   "status": "Release candidate",
+   "date": "2026-11-02",
+   "status": "Published",
    "title": "First public release",
    "summary": "13,673 election records from 17 years (1936 to 1960), 86.1% with a county.",
    "files": [
@@ -67,7 +67,7 @@
    "changes": null,
    "notes": [
     "An October 2026 review checked every matched election in the 1936 to 1943 and 1947 to 1949 lists against the text of its decision. 1,405 records had been matched to a decision about a different company: 755 now point to the right decision, and 650 have no decision until they are researched. The notes column of each record says what changed.",
-    "County codes for 250 records differ from the research workbooks: 178 Connecticut records moved from the 2022 planning regions back to the historical counties, 67 records in independent cities that had been coded as the county of the same name, and 5 records whose county had no code (fixed where the name identified one county, otherwise cleared for research). Each change is listed in county_code_fixes.csv.",
+    "County codes for 250 records differ from the research workbooks: 178 Connecticut records moved from the 2022 planning regions back to the historical counties, 67 records in independent cities that had been coded as the county of the same name, and 5 records whose county had no code (fixed where the name identified one county, otherwise cleared for research). Each change is listed in county_code_fixes.csv in the release folder of the repository.",
     "40 vote tallies failed a consistency check and are held back until checked by hand.",
     "County names follow the standard name for each FIPS code, so each county is spelled one way.",
     "SIC titles follow one spelling per code (1003 records changed, for example \"&\" written as \"and\")."
@@ -92,8 +92,8 @@
   },
   {
    "date": "2026-07",
-   "title": "Elections only, with match categories",
-   "summary": "Unfair labor practice cases removed, leaving 13,673 election records. Each election re-matched in three tiers, recorded in a new match category column."
+   "title": "Index years limited to representation cases, with match categories",
+   "summary": "Unfair labor practice cases removed from the years built from the index, leaving 13,673 records. Each record re-matched in three tiers, recorded in a new match category column."
   },
   {
    "date": "2026-06-26",

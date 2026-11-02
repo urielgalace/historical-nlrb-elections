@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0 (prepared 2026-10-20, release candidate)
+## 1.0 (2026-11-02)
 
 First release: 13,673 election records from 17 years (1936 to 1950, 1955, and 1960), 86.1% with
 a county. Built from the research workbooks with `scripts/build_release.py`. Before release, a

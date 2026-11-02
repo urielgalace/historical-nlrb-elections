@@ -226,8 +226,11 @@
   // ---------- Overview ----------
   async function pageOverview() {
     const md = await getText('content/overview.md');
-    return renderMarkdown(md, { kpis: kpiTiles, 'year-chart': yearFigure, start: startLinks, cite: citeBlock });
+    return renderMarkdown(md, { 'work-in-progress': workInProgress, kpis: kpiTiles, 'year-chart': yearFigure, start: startLinks, cite: citeBlock });
   }
+
+  const workInProgress = () => h('p', { class: 'callout', role: 'note' }, h('strong', null, 'This is a work in progress. '),
+    'We are still checking and adding to the data, so records and counts may change.');
 
   function kpiTiles() {
     const s = S.agg.stats;
@@ -262,7 +265,7 @@
 
   function startLinks() {
     const items = [
-      ['#data', 'Download or search the data', 'The current release as a CSV file, with a codebook, the research workbooks, and a searchable table.'],
+      ['#data', 'Download or search the data', 'The current release as a CSV file, with a codebook and a searchable table.'],
       ['#statistics', 'See the summary statistics', 'Elections by year, county, industry, state, union, and result.'],
       ['#methods', 'Read how the data was built', 'Sources, matching, coding rules, audits, and known limits.'],
       ['#versions', 'Check what changed', 'Every release is kept, with a dated list of what changed.'],
@@ -291,11 +294,8 @@
   const FILE_NOTES = {
     data: 'One row per election record. Opens in Excel, Stata, R, or Python.',
     codebook: 'What each column means and how complete it is.',
-    research: 'The project’s working spreadsheets, one per year, with every intermediate column.',
-    gap: 'Records still missing this information, with the case details needed to look them up.',
-    review: 'Tallies that failed a consistency check. They are left out of the dataset until checked by hand.',
-    fixes: 'Records whose county code differs from the research workbooks, with the reason.',
   };
+  const mainFiles = files => files.filter(f => f.kind === 'data' || f.kind === 'codebook');
   function fileList(files) {
     return h('div', { class: 'files' }, files.map(f => {
       const name = f.path.split('/').pop();
@@ -313,9 +313,9 @@
     return h('div', { class: 'page' },
       pageHead('Data', `Release ${rel.version} has ${fmt(s.n_elections)} election records and ${S.codebook.length} columns. Download the files, or search the records below.`),
       h('section', { class: 'section', 'aria-labelledby': 'files-title' },
-        sectionHead(`Files for release ${rel.version}`, `Prepared ${longDate(rel.date)}. Older releases stay available on the Versions page.`, 'files-title'),
+        sectionHead(`Files for release ${rel.version}`, null, 'files-title'),
         S.config.preview ? h('p', { class: 'preview-note' }, 'This is a preview, so downloads are turned off. On the GitHub site each button downloads the file.') : null,
-        fileList(rel.files)),
+        fileList(mainFiles(rel.files))),
       browseSection(),
       codebookSection());
   }
@@ -777,7 +777,7 @@
       h('div', { class: 'section' }, h('h3', null, 'What changed'), changesView(r)),
       r.notes && r.notes.length ? h('div', { class: 'section' }, h('h3', null, 'Notes on this release'),
         h('ul', { class: 'notes-list' }, r.notes.map(x => h('li', null, x)))) : null,
-      h('div', { class: 'section' }, h('h3', null, 'Files'), fileList(r.files)),
+      h('div', { class: 'section' }, h('h3', null, 'Files'), fileList([...mainFiles(r.files), ...r.files.filter(f => f.kind === 'changes')])),
     ].filter(Boolean);
   }
 
@@ -981,7 +981,7 @@
       h('p', null, `Release ${rel.version} (${rel.status.toLowerCase()}), ${longDate(rel.date)}. `, h('a', { href: '#versions' }, 'Version history'), '.'),
       h('p', null, 'Proposed licenses: data under CC BY 4.0, code under the MIT License.'),
       h('p', null, 'An independent academic research project, not affiliated with or endorsed by the National Labor Relations Board. NLRB decisions are public records.'),
-      S.config.contact_email ? h('p', null, 'Contact: ', h('a', { href: `mailto:${S.config.contact_email}` }, S.config.contact_email)) : null,
+      (S.config.contacts || []).length ? h('p', null, 'Contact: ', S.config.contacts.map((c, i) => [i ? ' and ' : '', `${c.name}, `, h('a', { href: `mailto:${c.email}` }, c.email)]), '.') : null,
       S.config.repo_url ? h('p', null, h('a', { href: S.config.repo_url }, 'Data and code on GitHub')) : null);
   }
 

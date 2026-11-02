@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as below. (Proposed citation, to confirm before launch.)"
+message: "If you use this dataset, please cite it as below. (Proposed citation.)"
 type: dataset
 title: "Historical NLRB Elections, 1936-1960"
 version: "1.0"
-date-released: "2026-10-19"
+date-released: "2026-11-02"
 authors:
   - family-names: Johnson
     given-names: Matthew S.

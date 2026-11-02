@@ -10,5 +10,5 @@ appropriate credit (see `CITATION.cff`), link to the license, and say whether yo
 The NLRB decisions the data is drawn from are public records. This project is not affiliated with
 or endorsed by the National Labor Relations Board.
 
-This license is proposed and will be confirmed by the project leads before the site is public.
+This license is proposed and will be confirmed by the project leads.
 The code in this repository is under the MIT License (`LICENSE`).

@@ -1,3 +1,5 @@
+<div data-component="work-in-progress"></div>
+
 # Union elections before the NLRB, 1936 to 1960
 
 A research dataset of {{n_elections}} union representation elections held under the National Labor Relations Act, rebuilt from the Board's published decisions. For each election it records where it took place, the employer's industry, the union, and what is known of the result, with a source for each value.
@@ -17,7 +19,8 @@ A research dataset of {{n_elections}} union representation elections held under 
 ## Read this before using the data
 
 - **Results are incomplete.** {{pct_definite}} of records have a definite result. For {{n_directed}} records the Board ordered an election, but the result is in a later document we have not found yet. Do not compute union win rates from this release: the known results lean toward wins.
-- **This is not every NLRB election.** The dataset covers the elections in the source lists and in published Board decisions. Many elections held by agreement of the parties never produced a published decision.
+- **This is not every NLRB election.** The dataset covers the cases listed in the NLRB's annual reports and in published Board decisions. Many elections held by agreement of the parties never produced a hearing or a published decision, and some listed cases never reached an election.
+- **The 1936 and 1937 lists are mixed.** Those two years also include unfair labor practice cases, because the annual reports for those years do not list representation cases separately. See [Methods](#methods).
 - **"Do." rows count.** {{n_ditto}} rows are marked "Do." (ditto) in the source lists, meaning the same employer as the row above, often on a different date. They are separate entries and are kept.
 - **Pilot years are partial.** 1950, 1955, and 1960 test the method on later years. They hold far fewer elections than were held in those years.
 
@@ -29,4 +32,4 @@ A research dataset of {{n_elections}} union representation elections held under 
 
 ## Who made this
 
-Matthew S. Johnson and Uriel Galace, with research assistants <span class="todo">names to confirm</span>. Questions and corrections are welcome on the [Contribute](#contribute) page.
+Matthew S. Johnson and Uriel Galace, with research assistants Adam De Leeuw, Anvita, Jeslyn Cai, and Ryan Zaaiett. Questions and corrections are welcome on the [Contribute](#contribute) page.

@@ -4,9 +4,9 @@ Where each value comes from, and how far to trust it. Every record in release {{
 
 ## Sources
 
-**Lists of elections.** For 1936 to 1943 and 1947 to 1949, the project starts from year-by-year lists of elections <span class="todo">To confirm: the original source of these lists</span>. Each list gives the case name and, for most years, the date of the hearing or the decision. Rows marked "Do." (ditto) repeat the employer of the row above; they are kept as separate records ({{n_ditto}} rows), as are {{n_further_hearing}} further hearings.
+**Lists of cases.** For 1936 to 1943 and 1947 to 1949, the project starts from the lists of cases printed in the NLRB's [annual reports](https://www.nlrb.gov/reports/agency-performance-reports/historical-reports/annual-reports). Section 3(c) of the National Labor Relations Act told the Board to report "the cases it has heard," so each of these reports prints a list for its fiscal year, which ran from July 1 to June 30. The lists are of cases heard, not of elections: some of these cases were settled, withdrawn, or dismissed without an election, and elections held by agreement without a hearing do not appear. From 1938 on, the project uses the part of each list headed "Representation Cases." The 1936 and 1937 lists are not divided this way, so they also include unfair labor practice cases: the 1936 report counts 152 hearings in those cases, and the 1937 report 153. The lists give the case name, along with the hearing and decision dates (1936 to 1940) or the case number (1947 to 1949). Rows marked "Do." (ditto) repeat the employer of the row above; they are kept as separate records ({{n_ditto}} rows), as are {{n_further_hearing}} further hearings.
 
-**Years without a list.** For 1944 to 1946, and for the pilot years 1950, 1955, and 1960, records come straight from the NLRB's index of Board decisions: one record for each representation case in the index for that year.
+**Years built from the index.** For 1944 to 1946, and for the pilot years 1950, 1955, and 1960, records come straight from the NLRB's index of Board decisions: one record for each representation case decided in that calendar year. The 1944 and 1945 reports do not print a list, and the reports stop printing lists after 1949. The 1946 report does print one, but this release builds 1946 from the index.
 
 **NLRB decisions.** The Board's decisions are printed in the bound volumes Decisions and Orders of the National Labor Relations Board, and the NLRB website indexes them with a scanned copy of each. The project downloaded and read 12,399 decisions and 2,603 certification documents. Their text comes from the text layer of the scans, so it contains scanning errors.
 
@@ -39,7 +39,7 @@ Each location has an evidence tier:
 
 In June 2026, 1,522 uncertain locations were checked against independent sources: 505 were confirmed and 299 corrected. The county is that of the plant where the election was held when the decision names it, and otherwise that of the company headquarters (see `plant_or_hq`). When a decision covers several plants, the others are listed in `additional_counties`.
 
-**County codes.** Counties carry five-digit FIPS codes. Connecticut uses its eight historical counties; the Census Bureau replaced them with planning regions in 2022, which did not exist in this period. For this release, {{n_county_fixes}} county codes were corrected from the research workbooks: {{n_county_fixes_ct}} Connecticut records that had been coded to the new planning regions, {{n_county_fixes_city}} records in Virginia independent cities that had been coded as the county of the same name (for example, the City of Richmond as Richmond County), and {{n_county_fixes_other}} records whose county had no code. Each correction is listed in a file on the Data page. County names follow the standard name for each code. The map uses present-day county lines.
+**County codes.** Counties carry five-digit FIPS codes. Connecticut uses its eight historical counties; the Census Bureau replaced them with planning regions in 2022, which did not exist in this period. For this release, {{n_county_fixes}} county codes were corrected from the research workbooks: {{n_county_fixes_ct}} Connecticut records that had been coded to the new planning regions, {{n_county_fixes_city}} records in Virginia independent cities that had been coded as the county of the same name (for example, the City of Richmond as Richmond County), and {{n_county_fixes_other}} records whose county had no code. Each correction is listed in `county_code_fixes.csv` in the release folder of the repository. County names follow the standard name for each code. The map uses present-day county lines.
 
 ## Industry
 
@@ -68,7 +68,7 @@ Only the first three, {{n_definite}} records ({{pct_definite}}), are definite re
 
 The known results lean heavily toward union wins: a win produces a certification that is easy to find, while a loss often does not. **Do not compute win rates from this release.** In July 2026 the project asked the NLRB for its records of elections before 1961 (FOIA request 2026-NLFO-01920). Those records should fill many of these gaps in a later release.
 
-**Vote tallies.** {{n_tally_found}} tallies of ballots were read from decisions and certifications. {{n_tally_held_back}} failed a consistency check and are held back until checked by hand: more votes than eligible voters, votes far above the size of the unit, or a very large count with nothing to check it against. They are listed on the Data page. The other {{n_tally}} ({{pct_tally}} of records) are in the dataset.
+**Vote tallies.** {{n_tally_found}} tallies of ballots were read from decisions and certifications. {{n_tally_held_back}} failed a consistency check and are held back until checked by hand: more votes than eligible voters, votes far above the size of the unit, or a very large count with nothing to check it against. They are listed on the Contribute page. The other {{n_tally}} ({{pct_tally}} of records) are in the dataset.
 
 ## Other fields
 
@@ -83,14 +83,10 @@ The research workbooks pass 23 automated checks. Among them: every FIPS code has
 ## Known limits
 
 - Coverage differs by year and by source. Counts are not totals of NLRB elections.
+- Records are cases, not a count of elections. The lists hold cases the Board heard, and the 1936 and 1937 lists include unfair labor practice cases.
+- List years are fiscal years (July to June), and years built from the index are calendar years.
 - Matches rest on names. An election at a company with several plants may be matched to the decision about another of its plants, and a few matches to a company with nearly the same name may remain.
 - Results are incomplete and lean toward union wins, as explained above.
 - Text comes from scans, so quoted passages contain scanning errors.
 - The 1987 SIC was written decades after these elections, so some industries of the period fit its categories loosely.
 - Locations are counties, not addresses. For cases covering several plants, the county is the main plant's.
-
-## How the work was done
-
-The records were assembled with programs written for this project and checked with the audits described above. An AI assistant (Claude, by Anthropic) helped write the programs, read decisions, and research locations. <span class="todo">To confirm: wording of this disclosure</span>
-
-The code that builds each release from the research files is in the repository's `scripts` folder. <span class="todo">To decide: whether to also publish the research pipeline code</span>

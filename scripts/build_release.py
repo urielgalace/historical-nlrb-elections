@@ -188,7 +188,7 @@ def main():
     ap.add_argument('--version', default='1.0')
     ap.add_argument('--date', required=True, help='release date, YYYY-MM-DD')
     ap.add_argument('--research-zip', default='', help='zip of the 17 research workbooks to ship with the release')
-    ap.add_argument('--status', default='Release candidate', help='Release candidate until the site is public')
+    ap.add_argument('--status', default='Release candidate', help='Release candidate until the site is public, then Published')
     args = ap.parse_args()
 
     records, held_back, county_fixes = build_records(args.source)
@@ -227,7 +227,7 @@ def main():
         f'records moved from the 2022 planning regions back to the historical counties, {n_city} records in '
         f'independent cities that had been coded as the county of the same name, and {n_other} records whose '
         f'county had no code (fixed where the name identified one county, otherwise cleared for research). '
-        f'Each change is listed in county_code_fixes.csv.',
+        f'Each change is listed in county_code_fixes.csv in the release folder of the repository.',
         f'{len(held_back)} vote tallies failed a consistency check and are held back until checked by hand.',
         'County names follow the standard name for each FIPS code, so each county is spelled one way.',
         f'SIC titles follow one spelling per code ({n_titles} records changed, for example "&" written as "and").',
